@@ -67,8 +67,6 @@ class BertClassifier(nn.Module):
         return out
 
     def init_bert_weights(self, module):
-        """ Initialize the weights.
-        """
         if isinstance(module, (nn.Linear, nn.Embedding)):
             module.weight.data.normal_(mean=0.0, std=0.02)
         if isinstance(module, nn.Linear) and module.bias is not None:
@@ -79,7 +77,7 @@ class Discriminator(nn.Module):
     """Discriminator model for source domain."""
 
     def __init__(self):
-        """Init discriminator."""
+       
         super(Discriminator, self).__init__()
         self.layer = nn.Sequential(
             nn.Linear(param.hidden_size, param.intermediate_size),
@@ -91,6 +89,5 @@ class Discriminator(nn.Module):
         )
 
     def forward(self, x):
-        """Forward the discriminator."""
         out = self.layer(x)
         return out
