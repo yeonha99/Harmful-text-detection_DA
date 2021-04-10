@@ -18,7 +18,7 @@ class BertEncoder(nn.Module):
 class DistilBertEncoder(nn.Module):
     def __init__(self):
         super(DistilBertEncoder, self).__init__()
-        self.encoder = DistilBertModel.from_pretrained('distilbert-base-uncased')
+        self.encoder = DistilBertModel.from_pretrained('distilbert-base-multilingual-cased')
         self.pooler = nn.Linear(param.hidden_size, param.hidden_size)
 
     def forward(self, x, mask=None):
