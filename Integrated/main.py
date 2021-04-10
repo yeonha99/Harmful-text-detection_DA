@@ -2,8 +2,8 @@
 
 import param
 from train import pretrain, adapt, evaluate
-from model import (BertEncoder, DistilBertEncoder, DistilRobertaEncoder,
-                   BertClassifier, Discriminator, RobertaEncoder, RobertaClassifier)
+from model import (BertEncoder, DistilBertEncoder, DistilKobertEncoder,
+                   BertClassifier, Discriminator, KobertEncoder)
 from utils import CSV2Array, convert_examples_to_features, \
     roberta_convert_examples_to_features, get_data_loader, init_model
 from sklearn.model_selection import train_test_split
