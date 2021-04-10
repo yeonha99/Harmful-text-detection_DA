@@ -1,22 +1,4 @@
 ```
-Last login: Thu Apr  8 21:51:14 on ttys000
-
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-(base) P1ZZ4:~ p1zz4$ conda activate torch
-(torch) P1ZZ4:~ p1zz4$ cd _________jongsul/
-(torch) P1ZZ4:_________jongsul p1zz4$ ls
-bert-AAD-master		news1.csv		train.tsv
-community.csv		pretraing.txt		train_2.csv
-community1.csv		pretraining_tsv.ipynb	train_3.csv
-final.csv		splitpoint.ipynb	train_4.csv
-news.csv		train.csv		train_label.csv
-(torch) P1ZZ4:_________jongsul p1zz4$ cd bert-AAD-master/
-(torch) P1ZZ4:bert-AAD-master p1zz4$ 
-(torch) P1ZZ4:bert-AAD-master p1zz4$ ls
-README.md	data		model.py	train.py
-__pycache__	main.py		param.py	utils.py
 (torch) P1ZZ4:bert-AAD-master p1zz4$ python main.py --pretrain --adapt
 === Argument Setting ===
 src: community
@@ -223,5 +205,7 @@ Epoch [03/03] Step [025/025]: acc=0.5000 g_loss=0.6948 d_loss=0.6930 kd_loss=0.0
 Avg Loss = 0.6722, Avg Accuracy = 0.6040
 === Evaluating classifier for encoded target domain ===
 >>> source only <<<
-
+Avg Loss = 0.6721, Avg Accuracy = 0.6040
+>>> domain adaption <<<
+Avg Loss = 0.6707, Avg Accuracy = 0.6040
 ```
