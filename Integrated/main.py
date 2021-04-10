@@ -8,6 +8,7 @@ from utils import CSV2Array, convert_examples_to_features, \
     roberta_convert_examples_to_features, get_data_loader, init_model
 from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer
+from tokenization_kobert import KoBertTokenizer
 import torch
 import os
 import random
@@ -107,7 +108,7 @@ def main():
     set_seed(args.train_seed)
 
     if args.model in ['kobert', 'distilkobert']:
-        tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
+        tokenizer = BertTokenizer.from_pretrained('monologg/kobert')
     else:
         tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
 
