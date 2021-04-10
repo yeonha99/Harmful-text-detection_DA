@@ -1,3 +1,5 @@
+## colab에서 interrupt난 버전의 log 
+
 ```
 2021-04-10 06:22:09.263042: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
 === Argument Setting ===
@@ -132,5 +134,3 @@ Avg Loss = 0.6805, Avg Accuracy = 0.6050
 ^C
 
 ```
-
-## colab에서 interrupt난 버전의 log 
