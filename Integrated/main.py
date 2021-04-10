@@ -130,10 +130,10 @@ def main():
                                                                         stratify=tgt_y,
                                                                         random_state=args.seed)
 
-        src_features = convert_examples_to_features(src_x, src_y, args.max_seq_length, tokenizer)
-        src_test_features = convert_examples_to_features(src_test_x, src_test_y, args.max_seq_length, tokenizer)
-        tgt_features = convert_examples_to_features(tgt_x, tgt_y, args.max_seq_length, tokenizer)
-        tgt_train_features = convert_examples_to_features(tgt_train_x, tgt_train_y, args.max_seq_length, tokenizer)
+    src_features = convert_examples_to_features(src_x, src_y, args.max_seq_length, tokenizer)
+    src_test_features = convert_examples_to_features(src_test_x, src_test_y, args.max_seq_length, tokenizer)
+    tgt_features = convert_examples_to_features(tgt_x, tgt_y, args.max_seq_length, tokenizer)
+    tgt_train_features = convert_examples_to_features(tgt_train_x, tgt_train_y, args.max_seq_length, tokenizer)
 
     # load dataset
 
