@@ -1,3 +1,4 @@
+```
 Last login: Thu Apr  8 21:51:14 on ttys000
 
 The default interactive shell is now zsh.
@@ -223,3 +224,4 @@ Avg Loss = 0.6722, Avg Accuracy = 0.6040
 === Evaluating classifier for encoded target domain ===
 >>> source only <<<
 
+```
