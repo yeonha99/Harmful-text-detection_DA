@@ -1,0 +1,98 @@
+=== Argument Setting ===
+src: community
+tgt: news
+seed: 42
+train_seed: 42
+model_type: bert
+max_seq_length: 128
+batch_size: 32
+pre_epochs: 4
+num_epochs: 4
+AD weight: 1.0
+KD weight: 1.0
+temperature: 20
+=== Processing datasets ===
+writing example 200 of 240
+writing example 200 of 300
+writing example 200 of 240
+=== Training classifier for source domain ===
+Epoch [01/04] Step [001/008]: cls_loss=0.7017
+Epoch [01/04] Step [002/008]: cls_loss=0.6954
+Epoch [01/04] Step [003/008]: cls_loss=0.6518
+Epoch [01/04] Step [004/008]: cls_loss=0.6194
+Epoch [01/04] Step [005/008]: cls_loss=0.6565
+Epoch [01/04] Step [006/008]: cls_loss=0.7267
+Epoch [01/04] Step [007/008]: cls_loss=0.6228
+Epoch [01/04] Step [008/008]: cls_loss=0.6511
+Epoch [02/04] Step [001/008]: cls_loss=0.6023
+Epoch [02/04] Step [002/008]: cls_loss=0.5702
+Epoch [02/04] Step [003/008]: cls_loss=0.6430
+Epoch [02/04] Step [004/008]: cls_loss=0.5647
+Epoch [02/04] Step [005/008]: cls_loss=0.6181
+Epoch [02/04] Step [006/008]: cls_loss=0.5681
+Epoch [02/04] Step [007/008]: cls_loss=0.7837
+Epoch [02/04] Step [008/008]: cls_loss=0.6314
+Epoch [03/04] Step [001/008]: cls_loss=0.7053
+Epoch [03/04] Step [002/008]: cls_loss=0.6315
+Epoch [03/04] Step [003/008]: cls_loss=0.6618
+Epoch [03/04] Step [004/008]: cls_loss=0.6257
+Epoch [03/04] Step [005/008]: cls_loss=0.6129
+Epoch [03/04] Step [006/008]: cls_loss=0.6119
+Epoch [03/04] Step [007/008]: cls_loss=0.6015
+Epoch [03/04] Step [008/008]: cls_loss=0.6300
+Epoch [04/04] Step [001/008]: cls_loss=0.4829
+Epoch [04/04] Step [002/008]: cls_loss=0.5384
+Epoch [04/04] Step [003/008]: cls_loss=0.5075
+Epoch [04/04] Step [004/008]: cls_loss=0.5034
+Epoch [04/04] Step [005/008]: cls_loss=0.4211
+Epoch [04/04] Step [006/008]: cls_loss=0.4686
+Epoch [04/04] Step [007/008]: cls_loss=0.5955
+Epoch [04/04] Step [008/008]: cls_loss=0.4332
+save pretrained model to: /content/snapshots/community/bert/42/source-encoder.pt
+save pretrained model to: /content/snapshots/community/bert/42/source-classifier.pt
+=== Evaluating classifier for source domain ===
+Avg Loss = 0.4145, Avg Accuracy = 0.7917
+Avg Loss = 0.6902, Avg Accuracy = 0.6833
+Avg Loss = 0.7411, Avg Accuracy = 0.5833
+=== Training encoder for target domain ===
+Epoch [01/04] Step [001/008]: acc=0.5000 g_loss=0.6898 d_loss=0.6945 kd_loss=0.0173
+Epoch [01/04] Step [002/008]: acc=0.5000 g_loss=0.6910 d_loss=0.6923 kd_loss=0.0313
+Epoch [01/04] Step [003/008]: acc=0.5000 g_loss=0.6927 d_loss=0.6914 kd_loss=0.0191
+Epoch [01/04] Step [004/008]: acc=0.5000 g_loss=0.6893 d_loss=0.6942 kd_loss=0.0514
+Epoch [01/04] Step [005/008]: acc=0.5000 g_loss=0.6893 d_loss=0.6915 kd_loss=0.0536
+Epoch [01/04] Step [006/008]: acc=0.5000 g_loss=0.6849 d_loss=0.6914 kd_loss=0.0266
+Epoch [01/04] Step [007/008]: acc=0.5000 g_loss=0.6879 d_loss=0.6883 kd_loss=0.0245
+Epoch [01/04] Step [008/008]: acc=0.5000 g_loss=0.6847 d_loss=0.6908 kd_loss=0.0212
+Avg Loss = 0.7418, Avg Accuracy = 0.6200
+Epoch [02/04] Step [001/008]: acc=0.5000 g_loss=0.6819 d_loss=0.6881 kd_loss=0.0175
+Epoch [02/04] Step [002/008]: acc=0.5000 g_loss=0.6707 d_loss=0.6923 kd_loss=0.0144
+Epoch [02/04] Step [003/008]: acc=0.5000 g_loss=0.6602 d_loss=0.6924 kd_loss=0.0255
+Epoch [02/04] Step [004/008]: acc=0.5000 g_loss=0.6569 d_loss=0.6917 kd_loss=0.0334
+Epoch [02/04] Step [005/008]: acc=0.5000 g_loss=0.6499 d_loss=0.6947 kd_loss=0.0303
+Epoch [02/04] Step [006/008]: acc=0.5000 g_loss=0.6486 d_loss=0.6910 kd_loss=0.0159
+Epoch [02/04] Step [007/008]: acc=0.5000 g_loss=0.6452 d_loss=0.6942 kd_loss=0.0127
+Epoch [02/04] Step [008/008]: acc=0.5000 g_loss=0.6416 d_loss=0.6942 kd_loss=0.0134
+Avg Loss = 0.7865, Avg Accuracy = 0.6033
+Epoch [03/04] Step [001/008]: acc=0.5000 g_loss=0.6418 d_loss=0.6933 kd_loss=0.0278
+Epoch [03/04] Step [002/008]: acc=0.5000 g_loss=0.6405 d_loss=0.6961 kd_loss=0.0317
+Epoch [03/04] Step [003/008]: acc=0.5000 g_loss=0.6474 d_loss=0.6921 kd_loss=0.0298
+Epoch [03/04] Step [004/008]: acc=0.5000 g_loss=0.6469 d_loss=0.6954 kd_loss=0.0145
+Epoch [03/04] Step [005/008]: acc=0.5000 g_loss=0.6508 d_loss=0.6918 kd_loss=0.0121
+Epoch [03/04] Step [006/008]: acc=0.5000 g_loss=0.6531 d_loss=0.6940 kd_loss=0.0091
+Epoch [03/04] Step [007/008]: acc=0.5000 g_loss=0.6525 d_loss=0.6947 kd_loss=0.0184
+Epoch [03/04] Step [008/008]: acc=0.5000 g_loss=0.6602 d_loss=0.6915 kd_loss=0.0248
+Avg Loss = 0.6946, Avg Accuracy = 0.6367
+Epoch [04/04] Step [001/008]: acc=0.5000 g_loss=0.6619 d_loss=0.6922 kd_loss=0.0187
+Epoch [04/04] Step [002/008]: acc=0.5000 g_loss=0.6626 d_loss=0.6942 kd_loss=0.0073
+Epoch [04/04] Step [003/008]: acc=0.5000 g_loss=0.6615 d_loss=0.6924 kd_loss=0.0080
+Epoch [04/04] Step [004/008]: acc=0.5000 g_loss=0.6667 d_loss=0.6917 kd_loss=0.0118
+Epoch [04/04] Step [005/008]: acc=0.5000 g_loss=0.6640 d_loss=0.6968 kd_loss=0.0221
+Epoch [04/04] Step [006/008]: acc=0.5000 g_loss=0.6730 d_loss=0.6905 kd_loss=0.0170
+Epoch [04/04] Step [007/008]: acc=0.5000 g_loss=0.6710 d_loss=0.6906 kd_loss=0.0161
+Epoch [04/04] Step [008/008]: acc=0.5000 g_loss=0.6867 d_loss=0.6876 kd_loss=0.0182
+Avg Loss = 0.7273, Avg Accuracy = 0.6300
+=== Evaluating classifier for encoded target domain ===
+>>> source only <<<
+Avg Loss = 0.7290, Avg Accuracy = 0.5833
+>>> domain adaption <<<
+Avg Loss = 0.7615, Avg Accuracy = 0.6300
