@@ -1,0 +1,6 @@
+train부분의 for문 안에 넣으면 됩니다.
+from random import uniform
+nlr=10**uniform(-3,-6)
+print(nlr)
+optimizer = optim.Adam(list(encoder.parameters()) + list(classifier.parameters()),
+                           lr=nrl)
