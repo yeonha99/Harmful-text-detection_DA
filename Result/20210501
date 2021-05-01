@@ -1,0 +1,415 @@
+=== Argument Setting ===
+src: news
+tgt: community
+seed: 42
+train_seed: 42
+model_type: distilbert
+max_seq_length: 128
+batch_size: 64
+pre_epochs: 4
+num_epochs: 10
+AD weight: 0.5
+KD weight: 0.9
+temperature: 20
+=== Processing datasets ===
+writing example 200 of 1600
+writing example 400 of 1600
+writing example 600 of 1600
+writing example 800 of 1600
+writing example 1000 of 1600
+writing example 1200 of 1600
+writing example 1400 of 1600
+writing example 1600 of 1600
+writing example 200 of 400
+writing example 400 of 400
+writing example 200 of 2000
+writing example 400 of 2000
+writing example 600 of 2000
+writing example 800 of 2000
+writing example 1000 of 2000
+writing example 1200 of 2000
+writing example 1400 of 2000
+writing example 1600 of 2000
+writing example 1800 of 2000
+writing example 2000 of 2000
+writing example 200 of 1600
+writing example 400 of 1600
+writing example 600 of 1600
+writing example 800 of 1600
+writing example 1000 of 1600
+writing example 1200 of 1600
+writing example 1400 of 1600
+writing example 1600 of 1600
+=== Training classifier for source domain ===
+Epoch [01/04] Step [001/025]: cls_loss=0.7351
+Epoch [01/04] Step [002/025]: cls_loss=0.6814
+Epoch [01/04] Step [003/025]: cls_loss=0.6671
+Epoch [01/04] Step [004/025]: cls_loss=0.6961
+Epoch [01/04] Step [005/025]: cls_loss=0.6945
+Epoch [01/04] Step [006/025]: cls_loss=0.6323
+Epoch [01/04] Step [007/025]: cls_loss=0.6448
+Epoch [01/04] Step [008/025]: cls_loss=0.6732
+Epoch [01/04] Step [009/025]: cls_loss=0.6521
+Epoch [01/04] Step [010/025]: cls_loss=0.6977
+Epoch [01/04] Step [011/025]: cls_loss=0.7115
+Epoch [01/04] Step [012/025]: cls_loss=0.6794
+Epoch [01/04] Step [013/025]: cls_loss=0.6547
+Epoch [01/04] Step [014/025]: cls_loss=0.6699
+Epoch [01/04] Step [015/025]: cls_loss=0.6782
+Epoch [01/04] Step [016/025]: cls_loss=0.6334
+Epoch [01/04] Step [017/025]: cls_loss=0.6649
+Epoch [01/04] Step [018/025]: cls_loss=0.6594
+Epoch [01/04] Step [019/025]: cls_loss=0.6233
+Epoch [01/04] Step [020/025]: cls_loss=0.6835
+Epoch [01/04] Step [021/025]: cls_loss=0.6951
+Epoch [01/04] Step [022/025]: cls_loss=0.6305
+Epoch [01/04] Step [023/025]: cls_loss=0.7090
+Epoch [01/04] Step [024/025]: cls_loss=0.6707
+Epoch [01/04] Step [025/025]: cls_loss=0.6500
+Epoch [02/04] Step [001/025]: cls_loss=0.6451
+Epoch [02/04] Step [002/025]: cls_loss=0.6283
+Epoch [02/04] Step [003/025]: cls_loss=0.6314
+Epoch [02/04] Step [004/025]: cls_loss=0.6223
+Epoch [02/04] Step [005/025]: cls_loss=0.6176
+Epoch [02/04] Step [006/025]: cls_loss=0.6553
+Epoch [02/04] Step [007/025]: cls_loss=0.5789
+Epoch [02/04] Step [008/025]: cls_loss=0.6018
+Epoch [02/04] Step [009/025]: cls_loss=0.6321
+Epoch [02/04] Step [010/025]: cls_loss=0.6167
+Epoch [02/04] Step [011/025]: cls_loss=0.5863
+Epoch [02/04] Step [012/025]: cls_loss=0.7012
+Epoch [02/04] Step [013/025]: cls_loss=0.6936
+Epoch [02/04] Step [014/025]: cls_loss=0.6203
+Epoch [02/04] Step [015/025]: cls_loss=0.6815
+Epoch [02/04] Step [016/025]: cls_loss=0.5875
+Epoch [02/04] Step [017/025]: cls_loss=0.6134
+Epoch [02/04] Step [018/025]: cls_loss=0.6594
+Epoch [02/04] Step [019/025]: cls_loss=0.5990
+Epoch [02/04] Step [020/025]: cls_loss=0.6519
+Epoch [02/04] Step [021/025]: cls_loss=0.6076
+Epoch [02/04] Step [022/025]: cls_loss=0.6490
+Epoch [02/04] Step [023/025]: cls_loss=0.6452
+Epoch [02/04] Step [024/025]: cls_loss=0.6175
+Epoch [02/04] Step [025/025]: cls_loss=0.6263
+Epoch [03/04] Step [001/025]: cls_loss=0.5588
+Epoch [03/04] Step [002/025]: cls_loss=0.5275
+Epoch [03/04] Step [003/025]: cls_loss=0.6149
+Epoch [03/04] Step [004/025]: cls_loss=0.6045
+Epoch [03/04] Step [005/025]: cls_loss=0.6060
+Epoch [03/04] Step [006/025]: cls_loss=0.6678
+Epoch [03/04] Step [007/025]: cls_loss=0.5800
+Epoch [03/04] Step [008/025]: cls_loss=0.5972
+Epoch [03/04] Step [009/025]: cls_loss=0.5386
+Epoch [03/04] Step [010/025]: cls_loss=0.6101
+Epoch [03/04] Step [011/025]: cls_loss=0.5585
+Epoch [03/04] Step [012/025]: cls_loss=0.5236
+Epoch [03/04] Step [013/025]: cls_loss=0.5279
+Epoch [03/04] Step [014/025]: cls_loss=0.5205
+Epoch [03/04] Step [015/025]: cls_loss=0.4816
+Epoch [03/04] Step [016/025]: cls_loss=0.6040
+Epoch [03/04] Step [017/025]: cls_loss=0.5119
+Epoch [03/04] Step [018/025]: cls_loss=0.5648
+Epoch [03/04] Step [019/025]: cls_loss=0.5822
+Epoch [03/04] Step [020/025]: cls_loss=0.5927
+Epoch [03/04] Step [021/025]: cls_loss=0.4825
+Epoch [03/04] Step [022/025]: cls_loss=0.7171
+Epoch [03/04] Step [023/025]: cls_loss=0.5724
+Epoch [03/04] Step [024/025]: cls_loss=0.5753
+Epoch [03/04] Step [025/025]: cls_loss=0.4339
+Epoch [04/04] Step [001/025]: cls_loss=0.5494
+Epoch [04/04] Step [002/025]: cls_loss=0.4808
+Epoch [04/04] Step [003/025]: cls_loss=0.4600
+Epoch [04/04] Step [004/025]: cls_loss=0.3683
+Epoch [04/04] Step [005/025]: cls_loss=0.5064
+Epoch [04/04] Step [006/025]: cls_loss=0.4361
+Epoch [04/04] Step [007/025]: cls_loss=0.4387
+Epoch [04/04] Step [008/025]: cls_loss=0.5637
+Epoch [04/04] Step [009/025]: cls_loss=0.4545
+Epoch [04/04] Step [010/025]: cls_loss=0.4824
+Epoch [04/04] Step [011/025]: cls_loss=0.4066
+Epoch [04/04] Step [012/025]: cls_loss=0.5283
+Epoch [04/04] Step [013/025]: cls_loss=0.4539
+Epoch [04/04] Step [014/025]: cls_loss=0.4523
+Epoch [04/04] Step [015/025]: cls_loss=0.4251
+Epoch [04/04] Step [016/025]: cls_loss=0.4572
+Epoch [04/04] Step [017/025]: cls_loss=0.5964
+Epoch [04/04] Step [018/025]: cls_loss=0.4491
+Epoch [04/04] Step [019/025]: cls_loss=0.4502
+Epoch [04/04] Step [020/025]: cls_loss=0.4853
+Epoch [04/04] Step [021/025]: cls_loss=0.5289
+Epoch [04/04] Step [022/025]: cls_loss=0.4170
+Epoch [04/04] Step [023/025]: cls_loss=0.4758
+Epoch [04/04] Step [024/025]: cls_loss=0.4617
+Epoch [04/04] Step [025/025]: cls_loss=0.4307
+save pretrained model to: /content/snapshots/news/distilbert/42/source-encoder.pt
+save pretrained model to: /content/snapshots/news/distilbert/42/source-classifier.pt
+=== Evaluating classifier for source domain ===
+Avg Loss = 0.3314, Avg Accuracy = 0.8781
+Avg Loss = 0.6269, Avg Accuracy = 0.6800
+Avg Loss = 0.8686, Avg Accuracy = 0.5905
+=== Training encoder for target domain ===
+Epoch [01/10] Step [001/025]: acc=0.5000 g_loss=0.7012 d_loss=0.6930 kd_loss=0.0208
+Epoch [01/10] Step [002/025]: acc=0.5000 g_loss=0.6933 d_loss=0.6932 kd_loss=0.3769
+Epoch [01/10] Step [003/025]: acc=0.5000 g_loss=0.6929 d_loss=0.6925 kd_loss=0.1739
+Epoch [01/10] Step [004/025]: acc=0.5000 g_loss=0.6959 d_loss=0.6917 kd_loss=0.0248
+Epoch [01/10] Step [005/025]: acc=0.5000 g_loss=0.6998 d_loss=0.6918 kd_loss=0.0954
+Epoch [01/10] Step [006/025]: acc=0.5000 g_loss=0.6981 d_loss=0.6913 kd_loss=0.1947
+Epoch [01/10] Step [007/025]: acc=0.5000 g_loss=0.6944 d_loss=0.6914 kd_loss=0.1474
+Epoch [01/10] Step [008/025]: acc=0.5000 g_loss=0.6899 d_loss=0.6937 kd_loss=0.0434
+Epoch [01/10] Step [009/025]: acc=0.5000 g_loss=0.6896 d_loss=0.6894 kd_loss=0.0480
+Epoch [01/10] Step [010/025]: acc=0.5000 g_loss=0.6837 d_loss=0.6905 kd_loss=0.0913
+Epoch [01/10] Step [011/025]: acc=0.5000 g_loss=0.6825 d_loss=0.6916 kd_loss=0.0866
+Epoch [01/10] Step [012/025]: acc=0.5000 g_loss=0.6868 d_loss=0.6872 kd_loss=0.0611
+Epoch [01/10] Step [013/025]: acc=0.5000 g_loss=0.6902 d_loss=0.6895 kd_loss=0.0545
+Epoch [01/10] Step [014/025]: acc=0.5000 g_loss=0.6917 d_loss=0.6884 kd_loss=0.0560
+Epoch [01/10] Step [015/025]: acc=0.5000 g_loss=0.6970 d_loss=0.6869 kd_loss=0.0796
+Epoch [01/10] Step [016/025]: acc=0.5000 g_loss=0.6981 d_loss=0.6888 kd_loss=0.0371
+Epoch [01/10] Step [017/025]: acc=0.5000 g_loss=0.6957 d_loss=0.6873 kd_loss=0.0498
+Epoch [01/10] Step [018/025]: acc=0.5000 g_loss=0.6889 d_loss=0.6857 kd_loss=0.0430
+Epoch [01/10] Step [019/025]: acc=0.5000 g_loss=0.6956 d_loss=0.6807 kd_loss=0.0489
+Epoch [01/10] Step [020/025]: acc=0.5000 g_loss=0.6920 d_loss=0.6832 kd_loss=0.0443
+Epoch [01/10] Step [021/025]: acc=0.5000 g_loss=0.6892 d_loss=0.6863 kd_loss=0.0547
+Epoch [01/10] Step [022/025]: acc=0.5000 g_loss=0.6946 d_loss=0.6786 kd_loss=0.0388
+Epoch [01/10] Step [023/025]: acc=0.5000 g_loss=0.7109 d_loss=0.6754 kd_loss=0.0356
+Epoch [01/10] Step [024/025]: acc=0.5000 g_loss=0.6877 d_loss=0.6874 kd_loss=0.0404
+Epoch [01/10] Step [025/025]: acc=0.5000 g_loss=0.6747 d_loss=0.6876 kd_loss=0.0580
+Avg Loss = 0.9053, Avg Accuracy = 0.5805
+Epoch [02/10] Step [001/025]: acc=0.5000 g_loss=0.6690 d_loss=0.6882 kd_loss=0.0185
+Epoch [02/10] Step [002/025]: acc=0.5000 g_loss=0.6677 d_loss=0.6869 kd_loss=0.0158
+Epoch [02/10] Step [003/025]: acc=0.5000 g_loss=0.6598 d_loss=0.6824 kd_loss=0.0105
+Epoch [02/10] Step [004/025]: acc=0.5000 g_loss=0.6663 d_loss=0.6790 kd_loss=0.0171
+Epoch [02/10] Step [005/025]: acc=0.5000 g_loss=0.6428 d_loss=0.6867 kd_loss=0.0224
+Epoch [02/10] Step [006/025]: acc=0.5000 g_loss=0.6425 d_loss=0.6850 kd_loss=0.0212
+Epoch [02/10] Step [007/025]: acc=0.5000 g_loss=0.6344 d_loss=0.6809 kd_loss=0.0221
+Epoch [02/10] Step [008/025]: acc=0.5000 g_loss=0.6198 d_loss=0.6877 kd_loss=0.0241
+Epoch [02/10] Step [009/025]: acc=0.5000 g_loss=0.6050 d_loss=0.6855 kd_loss=0.0240
+Epoch [02/10] Step [010/025]: acc=0.5000 g_loss=0.6107 d_loss=0.6912 kd_loss=0.0227
+Epoch [02/10] Step [011/025]: acc=0.5000 g_loss=0.6097 d_loss=0.6917 kd_loss=0.0285
+Epoch [02/10] Step [012/025]: acc=0.5000 g_loss=0.6153 d_loss=0.6869 kd_loss=0.0207
+Epoch [02/10] Step [013/025]: acc=0.5000 g_loss=0.6201 d_loss=0.6830 kd_loss=0.0263
+Epoch [02/10] Step [014/025]: acc=0.5000 g_loss=0.6019 d_loss=0.6924 kd_loss=0.0324
+Epoch [02/10] Step [015/025]: acc=0.5000 g_loss=0.6095 d_loss=0.6896 kd_loss=0.0265
+Epoch [02/10] Step [016/025]: acc=0.5000 g_loss=0.6174 d_loss=0.6936 kd_loss=0.0224
+Epoch [02/10] Step [017/025]: acc=0.5000 g_loss=0.6351 d_loss=0.6868 kd_loss=0.0268
+Epoch [02/10] Step [018/025]: acc=0.5000 g_loss=0.6360 d_loss=0.6894 kd_loss=0.0346
+Epoch [02/10] Step [019/025]: acc=0.5000 g_loss=0.6436 d_loss=0.6900 kd_loss=0.0332
+Epoch [02/10] Step [020/025]: acc=0.5000 g_loss=0.6599 d_loss=0.6887 kd_loss=0.0565
+Epoch [02/10] Step [021/025]: acc=0.5000 g_loss=0.6711 d_loss=0.6897 kd_loss=0.0245
+Epoch [02/10] Step [022/025]: acc=0.5000 g_loss=0.6836 d_loss=0.6859 kd_loss=0.0258
+Epoch [02/10] Step [023/025]: acc=0.5000 g_loss=0.6915 d_loss=0.6886 kd_loss=0.0217
+Epoch [02/10] Step [024/025]: acc=0.5000 g_loss=0.7007 d_loss=0.6864 kd_loss=0.0223
+Epoch [02/10] Step [025/025]: acc=0.5000 g_loss=0.7091 d_loss=0.6844 kd_loss=0.0174
+Avg Loss = 0.8762, Avg Accuracy = 0.5740
+Epoch [03/10] Step [001/025]: acc=0.5000 g_loss=0.7053 d_loss=0.6839 kd_loss=0.0166
+Epoch [03/10] Step [002/025]: acc=0.5000 g_loss=0.7000 d_loss=0.6866 kd_loss=0.0123
+Epoch [03/10] Step [003/025]: acc=0.5000 g_loss=0.6920 d_loss=0.6883 kd_loss=0.0089
+Epoch [03/10] Step [004/025]: acc=0.5000 g_loss=0.6829 d_loss=0.6865 kd_loss=0.0126
+Epoch [03/10] Step [005/025]: acc=0.5000 g_loss=0.6843 d_loss=0.6872 kd_loss=0.0125
+Epoch [03/10] Step [006/025]: acc=0.5000 g_loss=0.6700 d_loss=0.6906 kd_loss=0.0088
+Epoch [03/10] Step [007/025]: acc=0.5000 g_loss=0.6672 d_loss=0.6868 kd_loss=0.0184
+Epoch [03/10] Step [008/025]: acc=0.5000 g_loss=0.6580 d_loss=0.6931 kd_loss=0.0103
+Epoch [03/10] Step [009/025]: acc=0.5000 g_loss=0.6575 d_loss=0.6904 kd_loss=0.0183
+Epoch [03/10] Step [010/025]: acc=0.5000 g_loss=0.6613 d_loss=0.6912 kd_loss=0.0166
+Epoch [03/10] Step [011/025]: acc=0.5000 g_loss=0.6708 d_loss=0.6873 kd_loss=0.0138
+Epoch [03/10] Step [012/025]: acc=0.5000 g_loss=0.6661 d_loss=0.6888 kd_loss=0.0182
+Epoch [03/10] Step [013/025]: acc=0.5000 g_loss=0.6729 d_loss=0.6885 kd_loss=0.0184
+Epoch [03/10] Step [014/025]: acc=0.5000 g_loss=0.6765 d_loss=0.6883 kd_loss=0.0223
+Epoch [03/10] Step [015/025]: acc=0.5000 g_loss=0.6847 d_loss=0.6863 kd_loss=0.0284
+Epoch [03/10] Step [016/025]: acc=0.5000 g_loss=0.6883 d_loss=0.6897 kd_loss=0.0069
+Epoch [03/10] Step [017/025]: acc=0.5000 g_loss=0.6970 d_loss=0.6881 kd_loss=0.0248
+Epoch [03/10] Step [018/025]: acc=0.5000 g_loss=0.6971 d_loss=0.6895 kd_loss=0.0282
+Epoch [03/10] Step [019/025]: acc=0.5000 g_loss=0.7041 d_loss=0.6881 kd_loss=0.0143
+Epoch [03/10] Step [020/025]: acc=0.5000 g_loss=0.7079 d_loss=0.6885 kd_loss=0.0284
+Epoch [03/10] Step [021/025]: acc=0.5000 g_loss=0.7049 d_loss=0.6880 kd_loss=0.0421
+Epoch [03/10] Step [022/025]: acc=0.5000 g_loss=0.7161 d_loss=0.6843 kd_loss=0.0288
+Epoch [03/10] Step [023/025]: acc=0.5000 g_loss=0.7062 d_loss=0.6898 kd_loss=0.0144
+Epoch [03/10] Step [024/025]: acc=0.5000 g_loss=0.6994 d_loss=0.6931 kd_loss=0.0414
+Epoch [03/10] Step [025/025]: acc=0.5000 g_loss=0.7001 d_loss=0.6893 kd_loss=0.0255
+Avg Loss = 0.8979, Avg Accuracy = 0.5795
+Epoch [04/10] Step [001/025]: acc=0.5000 g_loss=0.6950 d_loss=0.6900 kd_loss=0.0141
+Epoch [04/10] Step [002/025]: acc=0.5000 g_loss=0.7009 d_loss=0.6840 kd_loss=0.0339
+Epoch [04/10] Step [003/025]: acc=0.5000 g_loss=0.6926 d_loss=0.6888 kd_loss=0.0200
+Epoch [04/10] Step [004/025]: acc=0.5000 g_loss=0.6977 d_loss=0.6852 kd_loss=0.0125
+Epoch [04/10] Step [005/025]: acc=0.5000 g_loss=0.6916 d_loss=0.6903 kd_loss=0.0073
+Epoch [04/10] Step [006/025]: acc=0.5000 g_loss=0.6965 d_loss=0.6870 kd_loss=0.0149
+Epoch [04/10] Step [007/025]: acc=0.5000 g_loss=0.6925 d_loss=0.6849 kd_loss=0.0136
+Epoch [04/10] Step [008/025]: acc=0.5000 g_loss=0.6813 d_loss=0.6930 kd_loss=0.0245
+Epoch [04/10] Step [009/025]: acc=0.5000 g_loss=0.6888 d_loss=0.6915 kd_loss=0.0217
+Epoch [04/10] Step [010/025]: acc=0.5000 g_loss=0.6952 d_loss=0.6865 kd_loss=0.0134
+Epoch [04/10] Step [011/025]: acc=0.5000 g_loss=0.6932 d_loss=0.6869 kd_loss=0.0245
+Epoch [04/10] Step [012/025]: acc=0.5000 g_loss=0.6917 d_loss=0.6865 kd_loss=0.0273
+Epoch [04/10] Step [013/025]: acc=0.5000 g_loss=0.6952 d_loss=0.6887 kd_loss=0.0131
+Epoch [04/10] Step [014/025]: acc=0.5000 g_loss=0.6930 d_loss=0.6874 kd_loss=0.0197
+Epoch [04/10] Step [015/025]: acc=0.5000 g_loss=0.6954 d_loss=0.6859 kd_loss=0.0161
+Epoch [04/10] Step [016/025]: acc=0.5000 g_loss=0.6965 d_loss=0.6874 kd_loss=0.0155
+Epoch [04/10] Step [017/025]: acc=0.5000 g_loss=0.7079 d_loss=0.6807 kd_loss=0.0234
+Epoch [04/10] Step [018/025]: acc=0.5000 g_loss=0.7073 d_loss=0.6853 kd_loss=0.0205
+Epoch [04/10] Step [019/025]: acc=0.5000 g_loss=0.7044 d_loss=0.6826 kd_loss=0.0094
+Epoch [04/10] Step [020/025]: acc=0.5000 g_loss=0.6784 d_loss=0.6937 kd_loss=0.0242
+Epoch [04/10] Step [021/025]: acc=0.5000 g_loss=0.6720 d_loss=0.6932 kd_loss=0.0285
+Epoch [04/10] Step [022/025]: acc=0.5000 g_loss=0.6861 d_loss=0.6937 kd_loss=0.0168
+Epoch [04/10] Step [023/025]: acc=0.5000 g_loss=0.6849 d_loss=0.6905 kd_loss=0.0142
+Epoch [04/10] Step [024/025]: acc=0.5000 g_loss=0.6860 d_loss=0.6882 kd_loss=0.0137
+Epoch [04/10] Step [025/025]: acc=0.5000 g_loss=0.6762 d_loss=0.6880 kd_loss=0.0099
+Avg Loss = 0.9473, Avg Accuracy = 0.5700
+Epoch [05/10] Step [001/025]: acc=0.5000 g_loss=0.6950 d_loss=0.6883 kd_loss=0.0148
+Epoch [05/10] Step [002/025]: acc=0.5000 g_loss=0.6933 d_loss=0.6834 kd_loss=0.0109
+Epoch [05/10] Step [003/025]: acc=0.5000 g_loss=0.6858 d_loss=0.6896 kd_loss=0.0090
+Epoch [05/10] Step [004/025]: acc=0.5000 g_loss=0.6890 d_loss=0.6893 kd_loss=0.0192
+Epoch [05/10] Step [005/025]: acc=0.5000 g_loss=0.6920 d_loss=0.6902 kd_loss=0.0214
+Epoch [05/10] Step [006/025]: acc=0.5000 g_loss=0.7014 d_loss=0.6941 kd_loss=0.0092
+Epoch [05/10] Step [007/025]: acc=0.5000 g_loss=0.7134 d_loss=0.6832 kd_loss=0.0102
+Epoch [05/10] Step [008/025]: acc=0.5000 g_loss=0.6993 d_loss=0.6943 kd_loss=0.0130
+Epoch [05/10] Step [009/025]: acc=0.5000 g_loss=0.7125 d_loss=0.6851 kd_loss=0.0086
+Epoch [05/10] Step [010/025]: acc=0.5000 g_loss=0.7064 d_loss=0.6854 kd_loss=0.0154
+Epoch [05/10] Step [011/025]: acc=0.5000 g_loss=0.7048 d_loss=0.6900 kd_loss=0.0188
+Epoch [05/10] Step [012/025]: acc=0.5000 g_loss=0.7037 d_loss=0.6906 kd_loss=0.0167
+Epoch [05/10] Step [013/025]: acc=0.5000 g_loss=0.7027 d_loss=0.6891 kd_loss=0.0097
+Epoch [05/10] Step [014/025]: acc=0.5000 g_loss=0.6974 d_loss=0.6853 kd_loss=0.0232
+Epoch [05/10] Step [015/025]: acc=0.5000 g_loss=0.6938 d_loss=0.6866 kd_loss=0.0199
+Epoch [05/10] Step [016/025]: acc=0.5000 g_loss=0.6987 d_loss=0.6840 kd_loss=0.0095
+Epoch [05/10] Step [017/025]: acc=0.5000 g_loss=0.6825 d_loss=0.6894 kd_loss=0.0266
+Epoch [05/10] Step [018/025]: acc=0.5000 g_loss=0.6855 d_loss=0.6907 kd_loss=0.0283
+Epoch [05/10] Step [019/025]: acc=0.5000 g_loss=0.6776 d_loss=0.6919 kd_loss=0.0233
+Epoch [05/10] Step [020/025]: acc=0.5000 g_loss=0.6825 d_loss=0.6922 kd_loss=0.0133
+Epoch [05/10] Step [021/025]: acc=0.5000 g_loss=0.6859 d_loss=0.6919 kd_loss=0.0173
+Epoch [05/10] Step [022/025]: acc=0.5000 g_loss=0.6833 d_loss=0.6923 kd_loss=0.0102
+Epoch [05/10] Step [023/025]: acc=0.5000 g_loss=0.6820 d_loss=0.6944 kd_loss=0.0114
+Epoch [05/10] Step [024/025]: acc=0.5000 g_loss=0.6885 d_loss=0.6907 kd_loss=0.0132
+Epoch [05/10] Step [025/025]: acc=0.5000 g_loss=0.7019 d_loss=0.6849 kd_loss=0.0166
+Avg Loss = 0.8872, Avg Accuracy = 0.5950
+Epoch [06/10] Step [001/025]: acc=0.5000 g_loss=0.6867 d_loss=0.6896 kd_loss=0.0120
+Epoch [06/10] Step [002/025]: acc=0.5000 g_loss=0.6969 d_loss=0.6904 kd_loss=0.0170
+Epoch [06/10] Step [003/025]: acc=0.5000 g_loss=0.6869 d_loss=0.6932 kd_loss=0.0093
+Epoch [06/10] Step [004/025]: acc=0.5000 g_loss=0.6956 d_loss=0.6856 kd_loss=0.0139
+Epoch [06/10] Step [005/025]: acc=0.5000 g_loss=0.6985 d_loss=0.6866 kd_loss=0.0125
+Epoch [06/10] Step [006/025]: acc=0.5000 g_loss=0.6895 d_loss=0.6901 kd_loss=0.0167
+Epoch [06/10] Step [007/025]: acc=0.5000 g_loss=0.6836 d_loss=0.6933 kd_loss=0.0198
+Epoch [06/10] Step [008/025]: acc=0.5000 g_loss=0.6836 d_loss=0.6972 kd_loss=0.0168
+Epoch [06/10] Step [009/025]: acc=0.5000 g_loss=0.6847 d_loss=0.6970 kd_loss=0.0179
+Epoch [06/10] Step [010/025]: acc=0.5000 g_loss=0.6851 d_loss=0.6929 kd_loss=0.0094
+Epoch [06/10] Step [011/025]: acc=0.5000 g_loss=0.6855 d_loss=0.6958 kd_loss=0.0145
+Epoch [06/10] Step [012/025]: acc=0.5000 g_loss=0.6917 d_loss=0.6927 kd_loss=0.0164
+Epoch [06/10] Step [013/025]: acc=0.5000 g_loss=0.6983 d_loss=0.6889 kd_loss=0.0130
+Epoch [06/10] Step [014/025]: acc=0.5000 g_loss=0.7023 d_loss=0.6898 kd_loss=0.0171
+Epoch [06/10] Step [015/025]: acc=0.5000 g_loss=0.7061 d_loss=0.6906 kd_loss=0.0116
+Epoch [06/10] Step [016/025]: acc=0.5000 g_loss=0.7045 d_loss=0.6942 kd_loss=0.0296
+Epoch [06/10] Step [017/025]: acc=0.5000 g_loss=0.7041 d_loss=0.6881 kd_loss=0.0203
+Epoch [06/10] Step [018/025]: acc=0.5000 g_loss=0.6980 d_loss=0.6931 kd_loss=0.0095
+Epoch [06/10] Step [019/025]: acc=0.5000 g_loss=0.7056 d_loss=0.6860 kd_loss=0.0150
+Epoch [06/10] Step [020/025]: acc=0.5000 g_loss=0.7020 d_loss=0.6888 kd_loss=0.0143
+Epoch [06/10] Step [021/025]: acc=0.5000 g_loss=0.6963 d_loss=0.6883 kd_loss=0.0121
+Epoch [06/10] Step [022/025]: acc=0.5000 g_loss=0.6941 d_loss=0.6880 kd_loss=0.0232
+Epoch [06/10] Step [023/025]: acc=0.5000 g_loss=0.6905 d_loss=0.6905 kd_loss=0.0277
+Epoch [06/10] Step [024/025]: acc=0.5000 g_loss=0.6971 d_loss=0.6872 kd_loss=0.0277
+Epoch [06/10] Step [025/025]: acc=0.5000 g_loss=0.6891 d_loss=0.6915 kd_loss=0.0088
+Avg Loss = 0.8900, Avg Accuracy = 0.5965
+Epoch [07/10] Step [001/025]: acc=0.5000 g_loss=0.6914 d_loss=0.6872 kd_loss=0.0108
+Epoch [07/10] Step [002/025]: acc=0.5000 g_loss=0.6934 d_loss=0.6847 kd_loss=0.0124
+Epoch [07/10] Step [003/025]: acc=0.5000 g_loss=0.6845 d_loss=0.6913 kd_loss=0.0068
+Epoch [07/10] Step [004/025]: acc=0.5000 g_loss=0.6898 d_loss=0.6913 kd_loss=0.0134
+Epoch [07/10] Step [005/025]: acc=0.5000 g_loss=0.6843 d_loss=0.6914 kd_loss=0.0127
+Epoch [07/10] Step [006/025]: acc=0.5000 g_loss=0.6870 d_loss=0.6925 kd_loss=0.0113
+Epoch [07/10] Step [007/025]: acc=0.5000 g_loss=0.6912 d_loss=0.6903 kd_loss=0.0127
+Epoch [07/10] Step [008/025]: acc=0.5000 g_loss=0.6900 d_loss=0.6942 kd_loss=0.0107
+Epoch [07/10] Step [009/025]: acc=0.5000 g_loss=0.6918 d_loss=0.6872 kd_loss=0.0118
+Epoch [07/10] Step [010/025]: acc=0.5000 g_loss=0.6827 d_loss=0.6974 kd_loss=0.0117
+Epoch [07/10] Step [011/025]: acc=0.5000 g_loss=0.6874 d_loss=0.6939 kd_loss=0.0183
+Epoch [07/10] Step [012/025]: acc=0.5000 g_loss=0.6929 d_loss=0.6923 kd_loss=0.0112
+Epoch [07/10] Step [013/025]: acc=0.5000 g_loss=0.7000 d_loss=0.6887 kd_loss=0.0128
+Epoch [07/10] Step [014/025]: acc=0.5000 g_loss=0.6881 d_loss=0.6938 kd_loss=0.0059
+Epoch [07/10] Step [015/025]: acc=0.5000 g_loss=0.6998 d_loss=0.6861 kd_loss=0.0137
+Epoch [07/10] Step [016/025]: acc=0.5000 g_loss=0.6978 d_loss=0.6915 kd_loss=0.0146
+Epoch [07/10] Step [017/025]: acc=0.5000 g_loss=0.6983 d_loss=0.6892 kd_loss=0.0104
+Epoch [07/10] Step [018/025]: acc=0.5000 g_loss=0.7010 d_loss=0.6917 kd_loss=0.0119
+Epoch [07/10] Step [019/025]: acc=0.5000 g_loss=0.7009 d_loss=0.6869 kd_loss=0.0072
+Epoch [07/10] Step [020/025]: acc=0.5000 g_loss=0.6953 d_loss=0.6934 kd_loss=0.0099
+Epoch [07/10] Step [021/025]: acc=0.5000 g_loss=0.7002 d_loss=0.6921 kd_loss=0.0083
+Epoch [07/10] Step [022/025]: acc=0.5000 g_loss=0.6971 d_loss=0.6961 kd_loss=0.0137
+Epoch [07/10] Step [023/025]: acc=0.5000 g_loss=0.7071 d_loss=0.6917 kd_loss=0.0069
+Epoch [07/10] Step [024/025]: acc=0.5000 g_loss=0.6987 d_loss=0.6935 kd_loss=0.0155
+Epoch [07/10] Step [025/025]: acc=0.5000 g_loss=0.7030 d_loss=0.6945 kd_loss=0.0067
+Avg Loss = 0.8981, Avg Accuracy = 0.5920
+Epoch [08/10] Step [001/025]: acc=0.5000 g_loss=0.7026 d_loss=0.6917 kd_loss=0.0069
+Epoch [08/10] Step [002/025]: acc=0.5000 g_loss=0.7061 d_loss=0.6892 kd_loss=0.0080
+Epoch [08/10] Step [003/025]: acc=0.5000 g_loss=0.7015 d_loss=0.6891 kd_loss=0.0054
+Epoch [08/10] Step [004/025]: acc=0.5000 g_loss=0.6955 d_loss=0.6935 kd_loss=0.0074
+Epoch [08/10] Step [005/025]: acc=0.5000 g_loss=0.6972 d_loss=0.6906 kd_loss=0.0071
+Epoch [08/10] Step [006/025]: acc=0.5000 g_loss=0.6887 d_loss=0.6958 kd_loss=0.0100
+Epoch [08/10] Step [007/025]: acc=0.5000 g_loss=0.6865 d_loss=0.6936 kd_loss=0.0113
+Epoch [08/10] Step [008/025]: acc=0.5000 g_loss=0.6782 d_loss=0.6934 kd_loss=0.0071
+Epoch [08/10] Step [009/025]: acc=0.5000 g_loss=0.6766 d_loss=0.6938 kd_loss=0.0142
+Epoch [08/10] Step [010/025]: acc=0.5000 g_loss=0.6779 d_loss=0.6907 kd_loss=0.0067
+Epoch [08/10] Step [011/025]: acc=0.5000 g_loss=0.6780 d_loss=0.6913 kd_loss=0.0045
+Epoch [08/10] Step [012/025]: acc=0.5000 g_loss=0.6797 d_loss=0.6923 kd_loss=0.0255
+Epoch [08/10] Step [013/025]: acc=0.5000 g_loss=0.6791 d_loss=0.6937 kd_loss=0.0191
+Epoch [08/10] Step [014/025]: acc=0.5000 g_loss=0.6816 d_loss=0.6927 kd_loss=0.0080
+Epoch [08/10] Step [015/025]: acc=0.5000 g_loss=0.6838 d_loss=0.6924 kd_loss=0.0127
+Epoch [08/10] Step [016/025]: acc=0.5000 g_loss=0.6830 d_loss=0.6934 kd_loss=0.0268
+Epoch [08/10] Step [017/025]: acc=0.5000 g_loss=0.6865 d_loss=0.6926 kd_loss=0.0145
+Epoch [08/10] Step [018/025]: acc=0.5000 g_loss=0.6902 d_loss=0.6916 kd_loss=0.0055
+Epoch [08/10] Step [019/025]: acc=0.5000 g_loss=0.6887 d_loss=0.6929 kd_loss=0.0119
+Epoch [08/10] Step [020/025]: acc=0.5000 g_loss=0.6939 d_loss=0.6931 kd_loss=0.0067
+Epoch [08/10] Step [021/025]: acc=0.5000 g_loss=0.6960 d_loss=0.6918 kd_loss=0.0070
+Epoch [08/10] Step [022/025]: acc=0.5000 g_loss=0.6985 d_loss=0.6908 kd_loss=0.0054
+Epoch [08/10] Step [023/025]: acc=0.5000 g_loss=0.6986 d_loss=0.6922 kd_loss=0.0077
+Epoch [08/10] Step [024/025]: acc=0.5000 g_loss=0.6983 d_loss=0.6935 kd_loss=0.0177
+Epoch [08/10] Step [025/025]: acc=0.5000 g_loss=0.7008 d_loss=0.6910 kd_loss=0.0086
+Avg Loss = 0.9566, Avg Accuracy = 0.5785
+Epoch [09/10] Step [001/025]: acc=0.5000 g_loss=0.6982 d_loss=0.6936 kd_loss=0.0088
+Epoch [09/10] Step [002/025]: acc=0.5000 g_loss=0.6989 d_loss=0.6919 kd_loss=0.0059
+Epoch [09/10] Step [003/025]: acc=0.5000 g_loss=0.6950 d_loss=0.6929 kd_loss=0.0090
+Epoch [09/10] Step [004/025]: acc=0.5000 g_loss=0.6934 d_loss=0.6917 kd_loss=0.0078
+Epoch [09/10] Step [005/025]: acc=0.5000 g_loss=0.6913 d_loss=0.6917 kd_loss=0.0059
+Epoch [09/10] Step [006/025]: acc=0.5000 g_loss=0.6939 d_loss=0.6912 kd_loss=0.0053
+Epoch [09/10] Step [007/025]: acc=0.5000 g_loss=0.6923 d_loss=0.6919 kd_loss=0.0039
+Epoch [09/10] Step [008/025]: acc=0.5000 g_loss=0.6921 d_loss=0.6924 kd_loss=0.0045
+Epoch [09/10] Step [009/025]: acc=0.5000 g_loss=0.6938 d_loss=0.6902 kd_loss=0.0059
+Epoch [09/10] Step [010/025]: acc=0.5000 g_loss=0.6903 d_loss=0.6931 kd_loss=0.0075
+Epoch [09/10] Step [011/025]: acc=0.5000 g_loss=0.6924 d_loss=0.6911 kd_loss=0.0103
+Epoch [09/10] Step [012/025]: acc=0.5000 g_loss=0.6922 d_loss=0.6917 kd_loss=0.0059
+Epoch [09/10] Step [013/025]: acc=0.5000 g_loss=0.6948 d_loss=0.6930 kd_loss=0.0090
+Epoch [09/10] Step [014/025]: acc=0.5000 g_loss=0.6971 d_loss=0.6916 kd_loss=0.0060
+Epoch [09/10] Step [015/025]: acc=0.5000 g_loss=0.6974 d_loss=0.6920 kd_loss=0.0061
+Epoch [09/10] Step [016/025]: acc=0.5000 g_loss=0.6991 d_loss=0.6921 kd_loss=0.0075
+Epoch [09/10] Step [017/025]: acc=0.5000 g_loss=0.7029 d_loss=0.6904 kd_loss=0.0067
+Epoch [09/10] Step [018/025]: acc=0.5000 g_loss=0.7025 d_loss=0.6911 kd_loss=0.0055
+Epoch [09/10] Step [019/025]: acc=0.5000 g_loss=0.6967 d_loss=0.6943 kd_loss=0.0050
+Epoch [09/10] Step [020/025]: acc=0.5000 g_loss=0.7027 d_loss=0.6917 kd_loss=0.0086
+Epoch [09/10] Step [021/025]: acc=0.5000 g_loss=0.6990 d_loss=0.6938 kd_loss=0.0090
+Epoch [09/10] Step [022/025]: acc=0.5000 g_loss=0.6909 d_loss=0.6955 kd_loss=0.0123
+Epoch [09/10] Step [023/025]: acc=0.5000 g_loss=0.6949 d_loss=0.6904 kd_loss=0.0091
+Epoch [09/10] Step [024/025]: acc=0.5000 g_loss=0.6952 d_loss=0.6946 kd_loss=0.0093
+Epoch [09/10] Step [025/025]: acc=0.5000 g_loss=0.6923 d_loss=0.6926 kd_loss=0.0096
+Avg Loss = 0.9261, Avg Accuracy = 0.5875
+Epoch [10/10] Step [001/025]: acc=0.5000 g_loss=0.6901 d_loss=0.6924 kd_loss=0.0063
+Epoch [10/10] Step [002/025]: acc=0.5000 g_loss=0.6882 d_loss=0.6936 kd_loss=0.0088
+Epoch [10/10] Step [003/025]: acc=0.5000 g_loss=0.6880 d_loss=0.6948 kd_loss=0.0067
+Epoch [10/10] Step [004/025]: acc=0.5000 g_loss=0.6906 d_loss=0.6909 kd_loss=0.0080
+Epoch [10/10] Step [005/025]: acc=0.5000 g_loss=0.6896 d_loss=0.6923 kd_loss=0.0050
+Epoch [10/10] Step [006/025]: acc=0.5000 g_loss=0.6911 d_loss=0.6908 kd_loss=0.0041
+Epoch [10/10] Step [007/025]: acc=0.5000 g_loss=0.6917 d_loss=0.6923 kd_loss=0.0074
+Epoch [10/10] Step [008/025]: acc=0.5000 g_loss=0.6935 d_loss=0.6939 kd_loss=0.0038
+Epoch [10/10] Step [009/025]: acc=0.5000 g_loss=0.6935 d_loss=0.6951 kd_loss=0.0049
+Epoch [10/10] Step [010/025]: acc=0.5000 g_loss=0.6965 d_loss=0.6931 kd_loss=0.0065
+Epoch [10/10] Step [011/025]: acc=0.5000 g_loss=0.6976 d_loss=0.6911 kd_loss=0.0060
+Epoch [10/10] Step [012/025]: acc=0.5000 g_loss=0.6960 d_loss=0.6921 kd_loss=0.0078
+Epoch [10/10] Step [013/025]: acc=0.5000 g_loss=0.6944 d_loss=0.6948 kd_loss=0.0043
+Epoch [10/10] Step [014/025]: acc=0.5000 g_loss=0.6997 d_loss=0.6912 kd_loss=0.0103
+Epoch [10/10] Step [015/025]: acc=0.5000 g_loss=0.6978 d_loss=0.6908 kd_loss=0.0084
+Epoch [10/10] Step [016/025]: acc=0.5000 g_loss=0.6911 d_loss=0.6969 kd_loss=0.0070
+Epoch [10/10] Step [017/025]: acc=0.5000 g_loss=0.6979 d_loss=0.6919 kd_loss=0.0092
+Epoch [10/10] Step [018/025]: acc=0.5000 g_loss=0.6974 d_loss=0.6925 kd_loss=0.0106
+Epoch [10/10] Step [019/025]: acc=0.5000 g_loss=0.6950 d_loss=0.6934 kd_loss=0.0050
+Epoch [10/10] Step [020/025]: acc=0.5000 g_loss=0.6967 d_loss=0.6923 kd_loss=0.0139
+Epoch [10/10] Step [021/025]: acc=0.5000 g_loss=0.6981 d_loss=0.6907 kd_loss=0.0166
+Epoch [10/10] Step [022/025]: acc=0.5000 g_loss=0.7018 d_loss=0.6909 kd_loss=0.0125
+Epoch [10/10] Step [023/025]: acc=0.5000 g_loss=0.6958 d_loss=0.6925 kd_loss=0.0067
+Epoch [10/10] Step [024/025]: acc=0.5000 g_loss=0.6951 d_loss=0.6953 kd_loss=0.0088
+Epoch [10/10] Step [025/025]: acc=0.5000 g_loss=0.6933 d_loss=0.6938 kd_loss=0.0040
+Avg Loss = 0.9548, Avg Accuracy = 0.5940
+=== Evaluating classifier for encoded target domain ===
+>>> source only <<<
+Avg Loss = 0.8413, Avg Accuracy = 0.5905
+>>> domain adaption <<<
+Avg Loss = 0.9417, Avg Accuracy = 0.5940
