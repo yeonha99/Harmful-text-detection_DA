@@ -49,10 +49,10 @@ def parse_arguments():
     parser.add_argument('--max_seq_length', type=int, default=128,
                         help="Specify maximum sequence length")
 
-    parser.add_argument('--alpha', type=float, default=1.0,
+    parser.add_argument('--alpha', type=float, default=0.5,
                         help="Specify adversarial weight")
 
-    parser.add_argument('--beta', type=float, default=1.0,
+    parser.add_argument('--beta', type=float, default=0.9,
                         help="Specify KD loss weight")
 
     parser.add_argument('--temperature', type=int, default=20,
@@ -64,7 +64,7 @@ def parse_arguments():
     parser.add_argument("--clip_value", type=float, default=0.01,
                         help="lower and upper clip value for disc. weights")
 
-    parser.add_argument('--batch_size', type=int, default=64,
+    parser.add_argument('--batch_size', type=int, default=32,
                         help="Specify batch size")
 
     parser.add_argument('--pre_epochs', type=int, default=3,
