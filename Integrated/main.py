@@ -4,8 +4,7 @@ import param
 from train import pretrain, adapt, evaluate
 from model import (BertEncoder, DistilBertEncoder, DistilKobertEncoder,
                    BertClassifier, Discriminator, KobertEncoder)
-from utils import CSV2Array, convert_examples_to_features, \
-    roberta_convert_examples_to_features, get_data_loader, init_model
+from utils import CSV2Array, convert_examples_to_features, get_data_loader, init_model
 from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer
 from tokenization_kobert import KoBertTokenizer
@@ -42,17 +41,17 @@ def parse_arguments():
     parser.add_argument('--load', default=False, action='store_true',
                         help="Load saved model")
 
-    parser.add_argument('--model', type=str, default="bert",
+    parser.add_argument('--model', type=str, default="kobert",
                         choices=["bert", "distilbert", "kobert", "distilkobert"],
                         help="Specify model type")
 
     parser.add_argument('--max_seq_length', type=int, default=128,
                         help="Specify maximum sequence length")
 
-    parser.add_argument('--alpha', type=float, default=0.5,
+    parser.add_argument('--alpha', type=float, default=1.0,
                         help="Specify adversarial weight")
 
-    parser.add_argument('--beta', type=float, default=0.9,
+    parser.add_argument('--beta', type=float, default=1.0,
                         help="Specify KD loss weight")
 
     parser.add_argument('--temperature', type=int, default=20,
