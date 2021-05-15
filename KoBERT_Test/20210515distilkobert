@@ -1,0 +1,201 @@
+2021-05-15 08:34:48.478975: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+=== Argument Setting ===
+src: community
+tgt: news
+seed: 42
+train_seed: 42
+model_type: distilkobert
+max_seq_length: 128
+batch_size: 32
+pre_epochs: 3
+num_epochs: 3
+AD weight: 1.0
+KD weight: 1.0
+temperature: 20
+=== Processing datasets ===
+writing example 200 of 800
+writing example 400 of 800
+writing example 600 of 800
+writing example 800 of 800
+writing example 200 of 200
+writing example 200 of 1000
+writing example 400 of 1000
+writing example 600 of 1000
+writing example 800 of 1000
+writing example 1000 of 1000
+writing example 200 of 800
+writing example 400 of 800
+writing example 600 of 800
+writing example 800 of 800
+Some weights of the model checkpoint at monologg/distilkobert were not used when initializing DistilBertModel: ['vocab_transform.bias', 'vocab_projector.bias', 'vocab_projector.weight', 'vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight']
+- This IS expected if you are initializing DistilBertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at monologg/distilkobert were not used when initializing DistilBertModel: ['vocab_transform.bias', 'vocab_projector.bias', 'vocab_projector.weight', 'vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight']
+- This IS expected if you are initializing DistilBertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+=== Training classifier for source domain ===
+Epoch [01/03] Step [001/025]: cls_loss=0.7143
+Epoch [01/03] Step [002/025]: cls_loss=0.7235
+Epoch [01/03] Step [003/025]: cls_loss=0.6976
+Epoch [01/03] Step [004/025]: cls_loss=0.7254
+Epoch [01/03] Step [005/025]: cls_loss=0.6904
+Epoch [01/03] Step [006/025]: cls_loss=0.7151
+Epoch [01/03] Step [007/025]: cls_loss=0.6787
+Epoch [01/03] Step [008/025]: cls_loss=0.6883
+Epoch [01/03] Step [009/025]: cls_loss=0.6924
+Epoch [01/03] Step [010/025]: cls_loss=0.7027
+Epoch [01/03] Step [011/025]: cls_loss=0.6729
+Epoch [01/03] Step [012/025]: cls_loss=0.6786
+Epoch [01/03] Step [013/025]: cls_loss=0.6626
+Epoch [01/03] Step [014/025]: cls_loss=0.7577
+Epoch [01/03] Step [015/025]: cls_loss=0.6404
+Epoch [01/03] Step [016/025]: cls_loss=0.6667
+Epoch [01/03] Step [017/025]: cls_loss=0.6855
+Epoch [01/03] Step [018/025]: cls_loss=0.7008
+Epoch [01/03] Step [019/025]: cls_loss=0.6763
+Epoch [01/03] Step [020/025]: cls_loss=0.7520
+Epoch [01/03] Step [021/025]: cls_loss=0.7059
+Epoch [01/03] Step [022/025]: cls_loss=0.6562
+Epoch [01/03] Step [023/025]: cls_loss=0.7286
+Epoch [01/03] Step [024/025]: cls_loss=0.6517
+Epoch [01/03] Step [025/025]: cls_loss=0.6600
+Epoch [02/03] Step [001/025]: cls_loss=0.6551
+Epoch [02/03] Step [002/025]: cls_loss=0.6823
+Epoch [02/03] Step [003/025]: cls_loss=0.6723
+Epoch [02/03] Step [004/025]: cls_loss=0.6738
+Epoch [02/03] Step [005/025]: cls_loss=0.5864
+Epoch [02/03] Step [006/025]: cls_loss=0.6930
+Epoch [02/03] Step [007/025]: cls_loss=0.7090
+Epoch [02/03] Step [008/025]: cls_loss=0.6282
+Epoch [02/03] Step [009/025]: cls_loss=0.6681
+Epoch [02/03] Step [010/025]: cls_loss=0.6705
+Epoch [02/03] Step [011/025]: cls_loss=0.6875
+Epoch [02/03] Step [012/025]: cls_loss=0.6706
+Epoch [02/03] Step [013/025]: cls_loss=0.6917
+Epoch [02/03] Step [014/025]: cls_loss=0.6574
+Epoch [02/03] Step [015/025]: cls_loss=0.6800
+Epoch [02/03] Step [016/025]: cls_loss=0.6812
+Epoch [02/03] Step [017/025]: cls_loss=0.6590
+Epoch [02/03] Step [018/025]: cls_loss=0.7149
+Epoch [02/03] Step [019/025]: cls_loss=0.7309
+Epoch [02/03] Step [020/025]: cls_loss=0.7019
+Epoch [02/03] Step [021/025]: cls_loss=0.7572
+Epoch [02/03] Step [022/025]: cls_loss=0.6450
+Epoch [02/03] Step [023/025]: cls_loss=0.6925
+Epoch [02/03] Step [024/025]: cls_loss=0.6249
+Epoch [02/03] Step [025/025]: cls_loss=0.6365
+Epoch [03/03] Step [001/025]: cls_loss=0.7277
+Epoch [03/03] Step [002/025]: cls_loss=0.6949
+Epoch [03/03] Step [003/025]: cls_loss=0.7078
+Epoch [03/03] Step [004/025]: cls_loss=0.6320
+Epoch [03/03] Step [005/025]: cls_loss=0.6546
+Epoch [03/03] Step [006/025]: cls_loss=0.6050
+Epoch [03/03] Step [007/025]: cls_loss=0.6584
+Epoch [03/03] Step [008/025]: cls_loss=0.6550
+Epoch [03/03] Step [009/025]: cls_loss=0.6472
+Epoch [03/03] Step [010/025]: cls_loss=0.6783
+Epoch [03/03] Step [011/025]: cls_loss=0.6356
+Epoch [03/03] Step [012/025]: cls_loss=0.6120
+Epoch [03/03] Step [013/025]: cls_loss=0.6846
+Epoch [03/03] Step [014/025]: cls_loss=0.7166
+Epoch [03/03] Step [015/025]: cls_loss=0.6436
+Epoch [03/03] Step [016/025]: cls_loss=0.7286
+Epoch [03/03] Step [017/025]: cls_loss=0.7213
+Epoch [03/03] Step [018/025]: cls_loss=0.6838
+Epoch [03/03] Step [019/025]: cls_loss=0.6713
+Epoch [03/03] Step [020/025]: cls_loss=0.6498
+Epoch [03/03] Step [021/025]: cls_loss=0.6506
+Epoch [03/03] Step [022/025]: cls_loss=0.6026
+Epoch [03/03] Step [023/025]: cls_loss=0.7723
+Epoch [03/03] Step [024/025]: cls_loss=0.6916
+Epoch [03/03] Step [025/025]: cls_loss=0.6350
+save pretrained model to: /content/snapshots/community/distilkobert/42/source-encoder.pt
+save pretrained model to: /content/snapshots/community/distilkobert/42/source-classifier.pt
+=== Evaluating classifier for source domain ===
+Avg Loss = 0.6561, Avg Accuracy = 0.6138
+Avg Loss = 0.6773, Avg Accuracy = 0.5950
+Avg Loss = 0.6774, Avg Accuracy = 0.5740
+=== Training encoder for target domain ===
+Epoch [01/03] Step [001/025]: acc=0.5000 g_loss=0.7017 d_loss=0.6927 kd_loss=0.0123
+Epoch [01/03] Step [002/025]: acc=0.5000 g_loss=0.7009 d_loss=0.6926 kd_loss=0.0030
+Epoch [01/03] Step [003/025]: acc=0.5000 g_loss=0.7013 d_loss=0.6923 kd_loss=0.0021
+Epoch [01/03] Step [004/025]: acc=0.5000 g_loss=0.6983 d_loss=0.6913 kd_loss=0.0020
+Epoch [01/03] Step [005/025]: acc=0.5000 g_loss=0.6960 d_loss=0.6911 kd_loss=0.0040
+Epoch [01/03] Step [006/025]: acc=0.5000 g_loss=0.6948 d_loss=0.6921 kd_loss=0.0026
+Epoch [01/03] Step [007/025]: acc=0.5000 g_loss=0.6946 d_loss=0.6907 kd_loss=0.0017
+Epoch [01/03] Step [008/025]: acc=0.5000 g_loss=0.6907 d_loss=0.6903 kd_loss=0.0007
+Epoch [01/03] Step [009/025]: acc=0.5000 g_loss=0.6859 d_loss=0.6904 kd_loss=0.0021
+Epoch [01/03] Step [010/025]: acc=0.5000 g_loss=0.6857 d_loss=0.6896 kd_loss=0.0022
+Epoch [01/03] Step [011/025]: acc=0.5000 g_loss=0.6874 d_loss=0.6855 kd_loss=0.0041
+Epoch [01/03] Step [012/025]: acc=0.5000 g_loss=0.6811 d_loss=0.6877 kd_loss=0.0037
+Epoch [01/03] Step [013/025]: acc=0.5000 g_loss=0.6749 d_loss=0.6885 kd_loss=0.0044
+Epoch [01/03] Step [014/025]: acc=0.5000 g_loss=0.6674 d_loss=0.6915 kd_loss=0.0036
+Epoch [01/03] Step [015/025]: acc=0.5000 g_loss=0.6745 d_loss=0.6865 kd_loss=0.0084
+Epoch [01/03] Step [016/025]: acc=0.5000 g_loss=0.6691 d_loss=0.6915 kd_loss=0.0038
+Epoch [01/03] Step [017/025]: acc=0.5000 g_loss=0.6647 d_loss=0.6924 kd_loss=0.0045
+Epoch [01/03] Step [018/025]: acc=0.5000 g_loss=0.6648 d_loss=0.6929 kd_loss=0.0046
+Epoch [01/03] Step [019/025]: acc=0.5000 g_loss=0.6625 d_loss=0.6894 kd_loss=0.0058
+Epoch [01/03] Step [020/025]: acc=0.5000 g_loss=0.6562 d_loss=0.6936 kd_loss=0.0061
+Epoch [01/03] Step [021/025]: acc=0.5000 g_loss=0.6589 d_loss=0.6888 kd_loss=0.0101
+Epoch [01/03] Step [022/025]: acc=0.5000 g_loss=0.6673 d_loss=0.6783 kd_loss=0.0067
+Epoch [01/03] Step [023/025]: acc=0.5000 g_loss=0.6547 d_loss=0.6875 kd_loss=0.0080
+Epoch [01/03] Step [024/025]: acc=0.5000 g_loss=0.6531 d_loss=0.6891 kd_loss=0.0094
+Epoch [01/03] Step [025/025]: acc=0.5000 g_loss=0.6591 d_loss=0.6874 kd_loss=0.0089
+Avg Loss = 0.6847, Avg Accuracy = 0.5720
+Epoch [02/03] Step [001/025]: acc=0.5000 g_loss=0.6559 d_loss=0.6894 kd_loss=0.0043
+Epoch [02/03] Step [002/025]: acc=0.5000 g_loss=0.6554 d_loss=0.6903 kd_loss=0.0058
+Epoch [02/03] Step [003/025]: acc=0.5000 g_loss=0.6548 d_loss=0.6895 kd_loss=0.0109
+Epoch [02/03] Step [004/025]: acc=0.5000 g_loss=0.6518 d_loss=0.6940 kd_loss=0.0086
+Epoch [02/03] Step [005/025]: acc=0.5000 g_loss=0.6593 d_loss=0.6910 kd_loss=0.0076
+Epoch [02/03] Step [006/025]: acc=0.5000 g_loss=0.6679 d_loss=0.6923 kd_loss=0.0071
+Epoch [02/03] Step [007/025]: acc=0.5000 g_loss=0.6617 d_loss=0.6951 kd_loss=0.0066
+Epoch [02/03] Step [008/025]: acc=0.5000 g_loss=0.6820 d_loss=0.6875 kd_loss=0.0110
+Epoch [02/03] Step [009/025]: acc=0.5000 g_loss=0.6775 d_loss=0.6913 kd_loss=0.0119
+Epoch [02/03] Step [010/025]: acc=0.5000 g_loss=0.6859 d_loss=0.6879 kd_loss=0.0150
+Epoch [02/03] Step [011/025]: acc=0.5000 g_loss=0.6837 d_loss=0.6927 kd_loss=0.0110
+Epoch [02/03] Step [012/025]: acc=0.5000 g_loss=0.6891 d_loss=0.6834 kd_loss=0.0205
+Epoch [02/03] Step [013/025]: acc=0.5000 g_loss=0.6795 d_loss=0.6896 kd_loss=0.0161
+Epoch [02/03] Step [014/025]: acc=0.5000 g_loss=0.6806 d_loss=0.6919 kd_loss=0.0144
+Epoch [02/03] Step [015/025]: acc=0.5000 g_loss=0.6782 d_loss=0.6897 kd_loss=0.0149
+Epoch [02/03] Step [016/025]: acc=0.5000 g_loss=0.6612 d_loss=0.6940 kd_loss=0.0201
+Epoch [02/03] Step [017/025]: acc=0.5000 g_loss=0.6692 d_loss=0.6879 kd_loss=0.0195
+Epoch [02/03] Step [018/025]: acc=0.5000 g_loss=0.6617 d_loss=0.6936 kd_loss=0.0190
+Epoch [02/03] Step [019/025]: acc=0.5000 g_loss=0.6564 d_loss=0.6913 kd_loss=0.0169
+Epoch [02/03] Step [020/025]: acc=0.5000 g_loss=0.6508 d_loss=0.6963 kd_loss=0.0148
+Epoch [02/03] Step [021/025]: acc=0.5000 g_loss=0.6535 d_loss=0.6932 kd_loss=0.0146
+Epoch [02/03] Step [022/025]: acc=0.5000 g_loss=0.6539 d_loss=0.6930 kd_loss=0.0184
+Epoch [02/03] Step [023/025]: acc=0.5000 g_loss=0.6586 d_loss=0.6940 kd_loss=0.0149
+Epoch [02/03] Step [024/025]: acc=0.5000 g_loss=0.6590 d_loss=0.6951 kd_loss=0.0186
+Epoch [02/03] Step [025/025]: acc=0.5000 g_loss=0.6671 d_loss=0.6913 kd_loss=0.0191
+Avg Loss = 0.6864, Avg Accuracy = 0.5510
+Epoch [03/03] Step [001/025]: acc=0.5000 g_loss=0.6656 d_loss=0.6965 kd_loss=0.0160
+Epoch [03/03] Step [002/025]: acc=0.5000 g_loss=0.6777 d_loss=0.6897 kd_loss=0.0186
+Epoch [03/03] Step [003/025]: acc=0.5000 g_loss=0.6822 d_loss=0.6937 kd_loss=0.0174
+Epoch [03/03] Step [004/025]: acc=0.5000 g_loss=0.6877 d_loss=0.6928 kd_loss=0.0268
+Epoch [03/03] Step [005/025]: acc=0.5000 g_loss=0.6929 d_loss=0.6956 kd_loss=0.0152
+Epoch [03/03] Step [006/025]: acc=0.5000 g_loss=0.7072 d_loss=0.6914 kd_loss=0.0225
+Epoch [03/03] Step [007/025]: acc=0.5000 g_loss=0.7149 d_loss=0.6954 kd_loss=0.0144
+Epoch [03/03] Step [008/025]: acc=0.5000 g_loss=0.7225 d_loss=0.6884 kd_loss=0.0193
+Epoch [03/03] Step [009/025]: acc=0.5000 g_loss=0.7203 d_loss=0.6904 kd_loss=0.0166
+Epoch [03/03] Step [010/025]: acc=0.5000 g_loss=0.7221 d_loss=0.6880 kd_loss=0.0217
+Epoch [03/03] Step [011/025]: acc=0.5000 g_loss=0.7197 d_loss=0.6919 kd_loss=0.0122
+Epoch [03/03] Step [012/025]: acc=0.5000 g_loss=0.7151 d_loss=0.6914 kd_loss=0.0162
+Epoch [03/03] Step [013/025]: acc=0.5000 g_loss=0.7149 d_loss=0.6890 kd_loss=0.0137
+Epoch [03/03] Step [014/025]: acc=0.5000 g_loss=0.7033 d_loss=0.6893 kd_loss=0.0141
+Epoch [03/03] Step [015/025]: acc=0.5000 g_loss=0.6964 d_loss=0.6881 kd_loss=0.0212
+Epoch [03/03] Step [016/025]: acc=0.5000 g_loss=0.6818 d_loss=0.6933 kd_loss=0.0224
+Epoch [03/03] Step [017/025]: acc=0.5000 g_loss=0.6872 d_loss=0.6882 kd_loss=0.0273
+Epoch [03/03] Step [018/025]: acc=0.5000 g_loss=0.6714 d_loss=0.6951 kd_loss=0.0206
+Epoch [03/03] Step [019/025]: acc=0.5000 g_loss=0.6713 d_loss=0.6926 kd_loss=0.0196
+Epoch [03/03] Step [020/025]: acc=0.5000 g_loss=0.6689 d_loss=0.6901 kd_loss=0.0161
+Epoch [03/03] Step [021/025]: acc=0.5000 g_loss=0.6645 d_loss=0.6942 kd_loss=0.0149
+Epoch [03/03] Step [022/025]: acc=0.5000 g_loss=0.6651 d_loss=0.6934 kd_loss=0.0203
+Epoch [03/03] Step [023/025]: acc=0.5000 g_loss=0.6704 d_loss=0.6936 kd_loss=0.0173
+Epoch [03/03] Step [024/025]: acc=0.5000 g_loss=0.6697 d_loss=0.6914 kd_loss=0.0177
+Epoch [03/03] Step [025/025]: acc=0.5000 g_loss=0.6750 d_loss=0.6922 kd_loss=0.0139
+Avg Loss = 0.6803, Avg Accuracy = 0.5580
+=== Evaluating classifier for encoded target domain ===
+>>> source only <<<
+Avg Loss = 0.6776, Avg Accuracy = 0.5740
+>>> domain adaption <<<
+Avg Loss = 0.6791, Avg Accuracy = 0.5580
