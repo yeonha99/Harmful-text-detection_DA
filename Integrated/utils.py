@@ -19,39 +19,6 @@ class InputFeatures(object):
         self.input_mask = input_mask
         self.label_id = label_id
 
-
-def XML2Array(neg_path, pos_path):
-    parser = etree.XMLParser(recover=True)
-    reviews = []
-    negCount = 0
-    posCount = 0
-    labels = []
-    regex = re.compile(r'[\n\r\t+]')
-
-    neg_tree = ET.parse(neg_path, parser=parser)
-    neg_root = neg_tree.getroot()
-
-    for rev in neg_root.iter('review_text'):
-        text = regex.sub(" ", rev.text)
-        reviews.append(text)
-        negCount += 1
-    labels.extend(np.zeros(negCount, dtype=int))
-
-    pos_tree = ET.parse(pos_path, parser=parser)
-    pos_root = pos_tree.getroot()
-
-    for rev in pos_root.iter('review_text'):
-        text = regex.sub(" ", rev.text)
-        reviews.append(text)
-        posCount += 1
-    labels.extend(np.ones(posCount, dtype=int))
-
-    reviews = np.array(reviews)
-    labels = np.array(labels)
-
-    return reviews, labels
-
-
 def CSV2Array(path):
     data = pd.read_csv(path, encoding='UTF-8')
     reviews, labels = data.comments.values.tolist(), data.label.values.tolist()
@@ -106,33 +73,6 @@ def save_model(args, net, name):
 def convert_examples_to_features(reviews, labels, max_seq_length, tokenizer,
                                  cls_token='[CLS]', sep_token='[SEP]',
                                  pad_token=0):
-    features = []
-    for ex_index, (review, label) in enumerate(zip(reviews, labels)):
-        if (ex_index + 1) % 200 == 0:
-            print("writing example %d of %d" % (ex_index + 1, len(reviews)))
-        tokens = tokenizer.tokenize(review)
-        if len(tokens) > max_seq_length - 2:
-            tokens = tokens[:(max_seq_length - 2)]
-        tokens = [cls_token] + tokens + [sep_token]
-        input_ids = tokenizer.convert_tokens_to_ids(tokens)
-        input_mask = [1] * len(input_ids)
-        padding_length = max_seq_length - len(input_ids)
-        input_ids = input_ids + ([pad_token] * padding_length)
-        input_mask = input_mask + ([0] * padding_length)
-
-        assert len(input_ids) == max_seq_length
-        assert len(input_mask) == max_seq_length
-
-        features.append(
-            InputFeatures(input_ids=input_ids,
-                          input_mask=input_mask,
-                          label_id=label))
-    return features
-
-
-def roberta_convert_examples_to_features(reviews, labels, max_seq_length, tokenizer,
-                                         cls_token='<s>', sep_token='</s>',
-                                         pad_token=1):
     features = []
     for ex_index, (review, label) in enumerate(zip(reviews, labels)):
         if (ex_index + 1) % 200 == 0:
