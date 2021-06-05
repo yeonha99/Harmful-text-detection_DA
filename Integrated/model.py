@@ -80,13 +80,14 @@ class Discriminator(nn.Module):
        
         super(Discriminator, self).__init__()
         self.layer = nn.Sequential(
-            nn.Linear(param.hidden_size, param.intermediate_size),
+            nn.Linear(768, 384),
             nn.LeakyReLU(),
-            nn.Linear(param.intermediate_size, param.intermediate_size),
+            nn.Linear(384, 384),
             nn.LeakyReLU(),
-            nn.Linear(param.intermediate_size, 1),
+            nn.Linear(384, 1),
             nn.Sigmoid()
         )
+
 
     def forward(self, x):
         out = self.layer(x)
