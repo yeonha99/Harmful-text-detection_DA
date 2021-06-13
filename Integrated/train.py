@@ -66,7 +66,7 @@ def adapt(args, src_encoder, tgt_encoder, discriminator,
     discriminator.train()
 
     # setup criterion and optimizer
-    BCELoss = nn.BCELoss()
+    BCELoss = nn.BCEWithLogitsLoss()
     KLDivLoss = nn.KLDivLoss(reduction='batchmean')
     optimizer_G = optim.Adam(tgt_encoder.parameters(), lr=param.d_learning_rate)
     optimizer_D = optim.Adam(discriminator.parameters(), lr=param.d_learning_rate)
